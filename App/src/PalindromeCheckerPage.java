@@ -1,21 +1,24 @@
 public class PalindromeCheckerPage {
 
 
-    private static final String APP_NAME = "Palindrome Checker App";
-    private static final String APP_VERSION = "Version 1.0";
-
-
     public static void main(String[] args) {
 
-        System.out.println("==================================");
-        System.out.println("      " + APP_NAME);
-        System.out.println("          " + APP_VERSION);
-        System.out.println("==================================");
 
-        System.out.println("Welcome to the Palindrome Checker Application!");
-        System.out.println("This application validates whether a given string is a palindrome.");
-        System.out.println("----------------------------------");
+        String input = "madam";
 
-        System.out.println("UC1 Completed Successfully.");
+        boolean isPalindrome = true;
+
+
+        for (int i = 0; i < input.length() / 2; i++) {
+
+            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+
+        System.out.println("Input text: " + input);
+        System.out.println("Is it a Palindrome? : " + isPalindrome);
     }
 }
